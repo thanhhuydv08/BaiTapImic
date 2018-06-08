@@ -1,0 +1,77 @@
+buoi so 3
+Quy uoc dat tên :
+1. package : ton bộ viết thường hooa them bang dấu _ nhưng nối nhau bằng dấu .
+2. Tên class : viết hoa các từ đầu tiên của tên vd : DemoVarious
+3. Tên Biến : viết hoa các từ phía sau còn lại viết thường : huyDemoVarious
+4. Constans : viết hoa toàn bộ từ : HUYDEMO
+
+
+
+
+
+
+
+
+
+- ////////////////////////////////////
+@ phương thức về thòi gian cần chú ý :
+//////////////////////////////////////
+ - Date - Calendar - Localdate
+   + Date date = new Date();
+	SimpleDateFormat df = new SimpleDateFormat("dd/MM/yy"); // format ngay theo định dạng theo yêu cầu
+	System.out.println(df.format(date));
+	
+	+ Calendar calendar = Calendar.getInstance();
+	System.out.println(calendar.get(Calendar.YEAR));// tach ra lay nam
+	System.out.println(calendar.get(Calendar.DATE));// tach ra lay ngay
+    calendar.add(Calendar.DATE,2);
+    + LocalDate sdate = LocalDate.now();
+	System.out.println(sdate);// in ra ngay thng nam  hiện tại luôn
+	System.out.println(sdate.getDayOfMonth());// tách ra ngày hiện tại luôn 
+	DayOfWeek ow = sdate.getDayOfWeek();
+	int value = ow.getValue();// cái này nghiên cuu kỹ lại chua hiểm lắm mục dích gán ngày đầu tiên của tuần cho biến value
+	System.out.println(value);// vi tri của tuần trong tháng
+	sdate = sdate.minusDays(today-1);// lấy ngày đầu tiên của tháng hiện tại tức là ngày 1 rồi
+	sdate = sdate.plusDays(1);// công ngày lên 1
+	
+- ////////////////////////////////////
+@ overload : nạp chồng 
+//////////////////////////////////////
+	
+	- Cùng tên hàm về biến nhưng khác kiểu 
+	method      public static int max (int a, int b)
+	method      public static double max (double a, double b)
+	method      public static double max (double a, double b, double c)// công thuc max(max(a,b),c);
+	      ===> code không bị lỗi nhé
+	 - nếu kiểu lớn hơn theo byte có hàm sẽ tự ép kiểu nhỏ sang nó
+	  vd int a=10;double b=100; ==> sẽ thực hiện method thứ 2 vì java sẽ tự ép kiểu int a sang double a ==> a= 10.0
+- ////////////////////////////////////
+@ Đệ quy : looop cao cấp hơn  code Buoi05_recusipn
+//////////////////////////////////////	
+	
+	- khó
+	
+- ////////////////////////////////////
+@ array Static : Mảng Buoi05-array còn mảng động chưa học
+//////////////////////////////////////		
+	
+	- Cách 1 : đặt tên kiểu []  tên biến ={...........}; String [] danhSach={"dff","dff",.....}
+	- cách 2 :                                            String [] danhSach = new String [10]; //mảng này rỗng ưu tiên
+	- Cách 3 :                                            String [] danhSach = new String [] {................};
+	- Cách 4 :                                            String danhSach[];
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
