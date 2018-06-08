@@ -15,9 +15,7 @@ public class Date_canlendar {
 		//Calendar calendar= new GregorianCalendar(2017,11,20);
 		calendar.add(Calendar.MONTH, 5);
 		System.out.println(" So ngay sau khi cong them 5 la: "+ df.format(calendar.getTime()));
-
 		String dateChuoi= " 20/11/2017";
-
 		try {
 			Date convertChuoi = df.parse(dateChuoi);//
 			System.out.println(" lay ngay trong string :"+df.format(convertChuoi));// bien df.format(convertChuoi) la kieu String
